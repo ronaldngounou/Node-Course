@@ -11,4 +11,7 @@ Do not use Node for CPU-intensive apps. Node should be use for data intensive an
 Express is built on top of the HTTP module in node.
 
 # 3. Node Package Manager
+To start a node server: npm-init
+
+
 
