@@ -42,15 +42,12 @@ async function updateCourse(price){
     const result = course.save();
     console.log(result);*/
 
-    const course = await Course.find({price: price});
-
-    
-    /* ,{
+    const course = await Course.findOneAndUpdate(filter ,{
         $set: {
-            author: "Jason",
-            isPublished: false
+            author: "Pricers",
+            price: 500
         }
-    }, { new: true });*/
+    }, { new: true });
     console.log(course);
 }
 
@@ -60,6 +57,6 @@ async function removeCourse(id) {
     console.log(course);
 }
 
+const filter = {price: 20};
 
-
-updateCourse(20);
+updateCourse(filter);
